@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Values.ConfigMap.name }}
+data:
+  SLACK_BOT_USER_ID: "U060K7U236X"
+  AZURE_COGNITIVE_SEARCH_INDEX_NAME: {{ .Values.ConfigMap.CognitiveSearch.index }}
+  TABLES_NAME_FEEDBACK: {{ .Values.ConfigMap.BlobStorage.feedbackTable }}
+  TABLES_STORAGE_ENDPOINT_SUFFIX: "core.windows.net"
+  REDIS_DB: "0"
+  SYNSMART_API_URL: {{ .Values.ConfigMap.synsmart_api_url }}
+  KEY_VAULT_URL: {{ .Values.ConfigMap.keyVault.url }}
+  AKS_SERVICE_PRINCIPAL_ID: {{ .Values.ConfigMap.aks.servicePrincipal.clientId }}
+  EMBEDDING_MODEL: {{ .Values.ConfigMap.LLM.embedding_model}}
+  MAIN_MODEL_NAME: {{ .Values.ConfigMap.LLM.completion_model}}
+  MAIN_MODEL_TEMPERATURE: "{{ .Values.ConfigMap.LLM.completion_model_temperature}}"
+  MODEL_API_VERSION: {{ .Values.ConfigMap.LLM.completion_model_api_version}}
+  MODEL_DEPLOYMENT_NAME: {{ .Values.ConfigMap.LLM.completion_model_deployment_name}}
+  AZURE_STORAGE_CONTAINER_NAME: {{ .Values.ConfigMap.BlobStorage.documentsContainerName }}
