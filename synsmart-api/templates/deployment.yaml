@@ -30,6 +30,9 @@ spec:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
         - name: {{ .Chart.Name }}
+          env:
+            - name: AZURE_ADDITIONALLY_ALLOWED_TENANTS
+              value: "*"
           envFrom:
           - secretRef:
               name: {{ .Values.secrets.envSecretName }}
