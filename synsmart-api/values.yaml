@@ -5,7 +5,7 @@
 replicaCount: 1
 
 secrets:
-  envSecretName: "synsmart-api-app-secrets"
+  envSecretName: synsmart-api-app-secrets
   secretProviderClassName: synsmart-api-secrets
 
 image:
