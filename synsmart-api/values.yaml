@@ -119,7 +119,7 @@ ConfigMap:
     completion_model_api_version: "2023-09-01-preview"
     completion_model_deployment_name: "azure-gpt-4-1106"
   CognitiveSearch:
-    index: "langchain-demo-synsmart"
+    index: "phenix-index"
 
 
 probeSettings:
