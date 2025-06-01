@@ -33,7 +33,6 @@ spec:
           envFrom:
           - secretRef:
               name: {{ .Values.secrets.envSecretName }}
-          envFrom:
           - configMapRef:
               name: {{ .Values.ConfigMap.name }}
           securityContext:
