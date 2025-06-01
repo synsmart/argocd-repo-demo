@@ -5,14 +5,17 @@
 replicaCount: 1
 
 secrets:
-  envSecretName: "phenix-api-app-secrets"
+  envSecretName: "synsmart-api-app-secrets"
 image:
   repository: synsmartacr.azurecr.io/synsmart-api
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: 0.1.41
 
-imagePullSecrets: []
+# imagePullSecrets: []
+imagePullSecrets:
+  - name: acr-creds
+
 nameOverride: ""
 fullnameOverride: ""
 
