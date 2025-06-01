@@ -6,6 +6,8 @@ replicaCount: 1
 
 secrets:
   envSecretName: "synsmart-api-app-secrets"
+  secretProviderClassName: synsmart-api-secrets
+
 image:
   repository: synsmartacr.azurecr.io/synsmart-api
   pullPolicy: IfNotPresent
