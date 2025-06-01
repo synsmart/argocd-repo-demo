@@ -67,12 +67,12 @@ spec:
               readOnly: true
       {{- with .Values.nodeSelector }}
       volumes:
-      - name: secrets-store-inline
-        csi:
-          driver: secrets-store.csi.k8s.io
-          readOnly: true
-          volumeAttributes:
-            secretProviderClass: {{ .Values.secrets.secretProviderClassName | quote }}
+        - name: secrets-store-inline
+          csi:
+            driver: secrets-store.csi.k8s.io
+            readOnly: true
+            volumeAttributes:
+              secretProviderClass: {{ .Values.secrets.secretProviderClassName | quote }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
       {{- end }}
