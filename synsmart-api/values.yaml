@@ -5,9 +5,9 @@
 replicaCount: 1
 
 secrets:
-  envSecretName: "sphenix-api-app-secrets"
+  envSecretName: "phenix-api-app-secrets"
 image:
-  repository: synsmart-api
+  repository: synsmartacr.azurecr.io/synsmart-api
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: latest
